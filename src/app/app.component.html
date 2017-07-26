@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
+<kendo-switch
+          [(ngModel)]="checkBox.checked"
+          [disabled]="checkBox.disabled"
+        ></kendo-switch>
+
+<kendo-numerictextbox
+    [value]="numericalTextBox.value" [min]="0" [max]="100" [autoCorrect]="numericalTextBox.autoCorrect">
+</kendo-numerictextbox>
+
+<kendo-maskedtextbox [mask]="maskedTextBox.mask" [value]="maskedTextBox.value"></kendo-maskedtextbox>
+
+<kendo-slider
+    [fixedTickWidth]="10"
+    [vertical]="false"
+    [min]="slider.min"
+    [max]="slider.max"
+    [smallStep]="slider.smallStep"
+    [(ngModel)] = "slider.valueVertical"
+></kendo-slider>
+
+<kendo-slider
+    [fixedTickWidth]="10"
+    [vertical]="true"
+    [min]="sliderVertical.min"
+    [max]="sliderVertical.max"
+    [smallStep]="sliderVertical.smallStep"
+    [(ngModel)] = "sliderVertical.valueVertical"
+></kendo-slider>
